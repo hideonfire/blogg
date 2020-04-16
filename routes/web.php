@@ -20,7 +20,7 @@ Route::get('/', function () {
 Route::get('average/{num?}', function ($num = 30) {
 	$arr = array();
 	$mid = $num/2;
-	for($i = 0; $i < $num; $i++){
+	for($i = 0; $i < $mid; $i++){
 		$arr[$i] = rand(27,33);
 		$arr[$i+$mid]=60 - $arr[$i] ;
 	}
