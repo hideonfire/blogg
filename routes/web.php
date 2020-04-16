@@ -16,3 +16,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('average/{num?}', function ($num = 30) {
+	$arr = array();
+	$mid = $num/2;
+	for($i = 0; $i < $num; $i++){
+		$arr[$i] = rand(27,33);
+		$arr[$i=$mid]=60 - $arr[$i] ;
+	}
+    for ($j=0; $j <$arr.length ; $j++) { 
+    	echo $arr[$j]."</br>";
+    }
+});
